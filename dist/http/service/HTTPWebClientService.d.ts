@@ -28,5 +28,11 @@ export declare class HTTPWebClientService {
     get<T>(urlPath: string, queryParams?: HTTPParams, options?: HTTPQueryOptions): Promise<HTTPResponse<T>>;
     /** */
     post<B, T = void>(urlPath: string, body: B, options?: HTTPQueryOptions): Promise<HTTPResponse<T>>;
+    /** */
+    put<B, T = void>(urlPath: string, body: B, options?: HTTPQueryOptions): Promise<HTTPResponse<T>>;
+    /** */
+    patch<B, T = void>(urlPath: string, body: B, options?: HTTPQueryOptions): Promise<HTTPResponse<T>>;
+    /** */
+    delete<T = void>(urlPath: string, queryParams?: HTTPParams, options?: HTTPQueryOptions): Promise<HTTPResponse<T>>;
 }
 export {};

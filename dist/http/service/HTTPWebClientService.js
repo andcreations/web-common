@@ -72,6 +72,27 @@ let HTTPWebClientService = HTTPWebClientService_1 = class HTTPWebClientService {
         }));
         return this.toHTTPResponse(response);
     }
+    /** */
+    async put(urlPath, body, options) {
+        const response = await this.axios.put(this.url(urlPath), JSON.stringify(body), this.config({
+            headers: options?.headers,
+        }));
+        return this.toHTTPResponse(response);
+    }
+    /** */
+    async patch(urlPath, body, options) {
+        const response = await this.axios.patch(this.url(urlPath), JSON.stringify(body), this.config({
+            headers: options?.headers,
+        }));
+        return this.toHTTPResponse(response);
+    }
+    /** */
+    async delete(urlPath, queryParams, options) {
+        const response = await this.axios.delete(this.url(urlPath, queryParams), this.config({
+            headers: options?.headers,
+        }));
+        return this.toHTTPResponse(response);
+    }
 };
 HTTPWebClientService = HTTPWebClientService_1 = __decorate([
     (0, common_1.Service)(),

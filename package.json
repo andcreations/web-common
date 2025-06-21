@@ -1,13 +1,13 @@
 {
   "name": "@andcreations/web-common",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Web commons",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist && rm -rf node_modules",
-    "rebuild": "rm -ef dist && npm run build",
+    "rebuild": "rm -rf dist && npm run build",
     "test": "jest"
   },
   "author": "AndCreations",
